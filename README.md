@@ -8,4 +8,4 @@
     ```
 - Make it work with react: [Click here](https://www.tiny.cloud/docs/tinymce/6/react-cloud/)
 - Article - How to set up the TinyMCE save plugin with EXPRESSJS - [Click here](https://www.tiny.cloud/blog/set-up-the-tinymce-save-plugin/)
-- Saving Docs: https://www.tiny.cloud/docs/plugins/opensource/save/
+- Saving in Docs: [Click here](https://www.tiny.cloud/docs/plugins/opensource/save/)
