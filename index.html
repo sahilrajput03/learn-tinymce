@@ -7,16 +7,64 @@
 		<script src="node_modules/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
 		<script>
 			tinymce.init({
-				// selector: '#mytextarea',
-				selector: 'body',
-				menubar: 'file edit view',
-				plugins: 'autosave',
+				// Necessary
+				selector: 'textarea#basic-example',
+
+				// Basic Setup Docs: https://www.tiny.cloud/docs/tinymce/6/basic-setup/
+
+				// Enable few plugins (optional)
+				// plugins: 'advlist link image lists',
+				// ~Sahil, you must enable this to access all good features
+				plugins: ['advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak', 'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime', 'media', 'table', 'emoticons', 'template', 'help'],
+				// FYI: 'code' plugin enables us see souce code by going to: `View>Source Code`
+
+				// Disabling menubar
+				// menubar: false,
+
+				// Set the editor size (optional)
+				// width: 600,
+				// height: 300,
+
+				// selector: 'div#editable',
+				// inline: true,
+
+				// To show only selected menus
+				// menubar: 'file edit view',
+
+				// I don't know what does it do?
+				// plugins: 'autosave',
 			})
+
+			// https://stackoverflow.com/a/41965468/10012446
+			function saveTextAsFile() {
+				var textToWrite = tinyMCE.activeEditor.getContent()
+				var textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'})
+				var fileNameToSaveAs = 'note.html'
+
+				var downloadLink = document.createElement('a')
+				downloadLink.download = fileNameToSaveAs
+				downloadLink.innerHTML = 'Download File'
+
+				downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob)
+				downloadLink.click()
+			}
 		</script>
 	</head>
 
 	<body>
 		<h1>TinyMCE Quick Start Guide</h1>
 		<p>I am paragraph</p>
+		<button onclick="saveTextAsFile()">Save Content</button>
+
+		<textarea id="basic-example">
+			<h1>Hello, I am Sahil!</h1>
+			<h1 style="padding-left: 40px;"><img src="https://avatars.githubusercontent.com/u/31458531?v=4" alt="" width="160" height="160"></h1>
+			<h1 style="text-align: left;"><a title="Its love" href="sahirajput03.ml">Go to portfolio</a></h1>
+			<h1>Headig 1</h1>
+			<p>Paragraph 1</p>
+		</textarea
+		>
+
+		<div id="editable">I am new div</div>
 	</body>
 </html>
