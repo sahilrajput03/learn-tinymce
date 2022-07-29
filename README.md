@@ -13,6 +13,6 @@
 
 ## Feedback
 
-Its not much worth:
+Its not much worth because:
 - saving implementation is not there from the software itself.. as they are just providing the frontend html editor build only (no backend to sync with real files at all so its good for beginners only)
 - multiple file support won't be even possible even if you try to get the generated output html and thus its not something to be used while building professional websites or anything
