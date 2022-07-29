@@ -1,15 +1,11 @@
-# learn-tinymce
+# learn tinymce
 
 - Saving Docs: https://www.tiny.cloud/docs/plugins/opensource/save/
-
-- How to set up the TinyMCE save plugin with EXPRESSJS: https://www.tiny.cloud/blog/set-up-the-tinymce-save-plugin/
-
-```js
-# Rought
-tinymce.triggerSave()
-
-
-// Get html ~Sahil
-tinyMCE.get('basic-example').getContent()
-
-```
+- Article - How to set up the TinyMCE save plugin with EXPRESSJS - [Click here](https://www.tiny.cloud/blog/set-up-the-tinymce-save-plugin/)
+- Make it work with react: [Click here](https://www.tiny.cloud/docs/tinymce/6/react-cloud/)
+- Getting generated Html form the modifications you made in tinymce editor:
+  - or via menu: `View > Source Code`
+  - via code:
+    ```js
+    tinyMCE.get('basic-example').getContent()
+    ```
