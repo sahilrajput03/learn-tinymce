@@ -1,0 +1,16 @@
+{
+	"name": "tiny-mice",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "serve -l 3000"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"serve": "^14.0.1",
+		"tinymce": "^6.1.2"
+	}
+}
